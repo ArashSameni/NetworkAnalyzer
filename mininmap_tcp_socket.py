@@ -9,7 +9,7 @@ def try_tcp_connection(target, port):
     s.close()
 
 target = input('Target: ')
-start_port, end_port = [int(x) for x in input('Ports range: ').split('-')]
+start_port, end_port = [int(x) for x in input('Port range(1-1000): ').split('-')]
 
 executor = ThreadPoolExecutor(max_workers=10)
 futures = [executor.submit(try_tcp_connection, target, port) for port in range(start_port, end_port + 1)]

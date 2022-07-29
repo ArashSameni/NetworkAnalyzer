@@ -8,7 +8,7 @@ def send_syn(dest_ip, dest_port, src_ip, src_port, dest_mac, src_mac, interface)
     layer3_protocol_number = '0800'  # EtherType: 0800 for IPv4
     version = '45'  # 4: IPv4, 5: 5*32 bits (20 bytes)
     diff_serv = '10'  # for QoS
-    total_length = '003c'  # 28: 40 bytes, 3c: 60 bytes
+    total_length = '0028'  # 28: 40 bytes, 3c: 60 bytes
     id = '07c3'
     flags = '4000'  # don't fragment
     ttl = '40'
@@ -32,5 +32,5 @@ def send_syn(dest_ip, dest_port, src_ip, src_port, dest_mac, src_mac, interface)
                              + flags + ttl + layer4_protocol_number + ip_checksum
                              + src_ip + dest_ip + src_port + dest_port
                              + seq_num + ack + tcp_header_length
-                             + window_size + tcp_checksum + urgent_pointer + '020405b40402080ad0b8b1310000000001030307')
+                             + window_size + tcp_checksum + urgent_pointer)
     pkt_sender.send_packet(packet, interface)

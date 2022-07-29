@@ -11,4 +11,4 @@ with open('info.txt', 'r') as file:
     src_mac = lines[5].replace(':', '')
     dest_mac = lines[6].replace(':', '')
     send_syn(dest_ip, dest_port, src_ip, src_port, dest_mac, src_mac, interface)
-    print('54 bytes sent on ' + interface)
+    print(f'TCP SYN packet sent to {dest_ip}:{dest_port} through {interface}')
