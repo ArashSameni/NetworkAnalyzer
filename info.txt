@@ -1,8 +1,7 @@
-142.250.181.238
-80
-192.168.43.170
-3000
-wlp3s0
-70 66 55 c0 9f 53 
-44 55 c4 1f da ce
-bash info.sh 93.184.216.34 80 wlp3s0 3000
+Dest IP:                 93.184.216.34
+Dest Port:               80
+Src IP:                  192.168.200.221
+Src Port:                3000
+Interface:               wlp3s0
+Interface's Mac Address: 70:66:55:c0:9f:53 
+Gateway's Mac Address:   96:8d:38:93:ec:8b
